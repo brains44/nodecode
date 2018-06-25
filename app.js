@@ -9,7 +9,7 @@ var app = express();
 app.use(express.static('public'));
 console.log('Exact name: ' + process.env.ORA_INSTANCE_NAME);
 runGetRequest();
-//runDatabaseQuery();
+runDatabaseQuery();
 
 // Does a GET request to ip.jsontest.com
 function runGetRequest() {
@@ -29,7 +29,7 @@ function runGetRequest() {
 
 //Executes a SQL query
 function runDatabaseQuery() {
-    connection.query("SELECT * FROM SampleTable", function(error, rows, fields) {
+    connection.query("SELECT * FROM SecretTable", function(error, rows, fields) {
         if(!error) {
             console.log(rows);
         } else {
