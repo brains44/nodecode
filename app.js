@@ -19,7 +19,7 @@ function runGetRequest() {
     var url = "http://140.86.15.104:3000/shield/33/45/yellow/brains44";
     request(url, function(error, response, body) {
         if(!error) {
-            console.log(body);
+            console.log("After schooting the replay"+body);
         } else {
             console.log(error);
         }
